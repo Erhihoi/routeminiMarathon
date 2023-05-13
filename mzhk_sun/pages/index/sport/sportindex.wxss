@@ -1,0 +1,634 @@
+/* mzhk_sun/pages/index/sport/sportset.wxss */
+page {
+    font-size: 14px;
+}
+
+.gallery {
+    background-color: #efefef;
+    background-color: #fff;
+    background-color: #cceb1d;
+    background-color: #e6e6e6;
+    padding-top: 40rpx;
+    padding-bottom: 60rpx;
+    height: 100%;
+}
+
+.board {
+    width: 720rpx;
+    margin: 0px 15rpx;
+    width: 680rpx;
+    margin: 0px 35rpx;
+    width: 700rpx;
+    margin: 0px 25rpx;
+    background: #73c7ec;
+    background-color: #efefef;
+    background-color: #fff;
+    /* background-color: #fd3535;
+    background: #35aafd; */
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.scroll-h {
+    height: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.daliy {
+    font-size: 14px;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+    width: 24%;
+    margin-bottom: 19rpx;
+    border-radius: 8px;
+}
+
+.p1 {
+    background: #cfe8ff;
+}
+
+.p2 {
+    background: aquamarine;
+}
+
+.p3 {
+    background: bisque;
+}
+
+.p4 {
+    background: beige;
+}
+
+.pno {
+    /* height: 195rpx; */
+    box-sizing: border-box;
+    /* line-height: 195rpx; */
+    text-align: center;
+    font-weight: 700;
+    line-height: 100rpx;
+}
+
+.menu2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sp1,
+.sp2,
+.sp3,
+.sp4 {
+    width: 50%;
+    /* border-radius: 8px; */
+    background: #cfe8ff;
+    background: #98e7ff;
+    /* color: #fff; */
+}
+
+.sp1 {
+    /* background: #cfe8ff;
+    background: #6cd0ff; */
+    background: #fff;
+    color: #000;
+}
+
+.sp2 {
+    /* background: aquamarine;
+    background: #fd843c; */
+}
+
+.sp3 {
+    /* background: #ececec; */
+}
+
+.sp4 {
+    /* background: beige; */
+    /* background: #F44336; */
+    width: 49.5%;
+}
+
+.pno2 {
+    /* height: 195rpx; */
+    box-sizing: border-box;
+    /* line-height: 195rpx; */
+    text-align: center;
+    font-weight: 700;
+    line-height: 108rpx;
+}
+
+.mergeye {
+    display: flex;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.mergeye view {
+    /* border-radius: 10px; */
+    color: #fff;
+    font-weight: 600;
+}
+
+.lpart {
+    width: 48%;
+    width: 28%;
+    /* box-shadow: inset -5px -5px 5px grey; */
+    padding-right: 0;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    /* border: 1px solid #666; */
+}
+
+.rpart {
+    width: 48%;
+    width: 28%;
+    padding-left: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+.spart {
+    height: 375rpx;
+    width: 375rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+
+.second-screen {
+    height: 195rpx;
+    background: #ffdcc7;
+    background: #fd843c;
+    box-sizing: border-box;
+    line-height: 195rpx;
+    text-align: center;
+}
+
+.race-middle {
+    margin-top: 86rpx;
+    text-align: center;
+}
+
+.race {
+    background: #F44336;
+    height: 100%;
+    width: 100%;
+    border-radius: 86px;
+    border: 10px solid yellow;
+    box-sizing: border-box;
+}
+
+.ppart {
+    background: #ffb100;
+    height: 340rpx;
+    text-overflow: clip;
+    padding-top: 20rpx;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow: scroll;
+}
+
+.fpart {
+    background: #d7eaf3;
+    background: #6cd0ff;
+    height: 195rpx;
+    text-overflow: clip;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow: scroll;
+    box-sizing: border-box;
+    line-height: 195rpx;
+    text-align: center;
+}
+
+.calender {
+    width: 100%;
+    /* background-color: #fff; */
+}
+
+.cg1 {
+    width: 100%;
+    background: #fff;
+    padding-bottom: 0rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto;
+}
+
+.cg2 {
+    background: #ffdd76;
+    padding: 32rpx 45rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.cg3 {
+    border-radius: 0 0 10px 10px;
+    clear: both;
+}
+
+.cg4 {
+    background: #fff;
+    height: 280rpx;
+}
+
+.test {
+    width: 756rpx;
+    background: linear-gradient(180deg, #ffffff, #ff000000);
+    clear: both;
+    float: left;
+    height: 118rpx;
+}
+
+.plantit {
+    background: #F44336;
+    color: #fff;
+    font-size: 14px;
+}
+
+.title {
+    width: 50rpx;
+    height: 50rpx;
+    background: #fff;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50rpx;
+    font-size: 12px;
+    margin-top: 11rpx;
+    margin-right: 10rpx;
+    border-radius: 5px;
+}
+
+/* 环绕造型 */
+.dot {
+    width: 85rpx;
+    /* #fff807 */
+    background: #fffc98;
+    /* background: #e2e2e2; */
+    background: #f5c015;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40rpx;
+    font-size: 12px;
+    margin-right: 28rpx;
+    margin-bottom: 13rpx;
+    /* border-radius: 15px 0; */
+    border-radius: 3px;
+}
+
+.check {
+    width: 35rpx;
+    height: 35rpx;
+    padding-top: 13rpx;
+}
+
+.distance {
+    height: 9rpx;
+    /* background: #07ff25; */
+}
+
+.feng {
+    /* width: 98%; */
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fff;
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: 78rpx;
+    /* margin-bottom: 15rpx; */
+    border: 1px solid #565656;
+    border-left: none;
+    /* border-right: none; */
+}
+
+.bian {
+    width: 50rpx;
+    float: left;
+}
+
+.bei {
+    padding-left: 29rpx;
+    box-sizing: border-box;
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 26rpx;
+    padding-bottom: 26rpx;
+}
+
+.prog {
+    height: 50rpx;
+    /* background-color: #fbff18; */
+}
+
+/* 公告牌 */
+.titrow {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin-bottom: 23rpx;
+}
+
+.titrow .one {
+    padding: 8rpx 28rpx;
+    background: #F44336;
+    background: #565656;
+    border-radius: 12px;
+    border-radius: 50px;
+}
+
+.titrow .two {
+    padding: 8rpx 19rpx;
+    background: #CDDC39;
+    background: #F44336;
+    border-radius: 12px;
+    border-radius: 50px;
+}
+
+.titrow .three {
+    /* border: 1px solid #666; */
+    padding: 8rpx 10rpx;
+}
+
+.titrow view {
+    margin-right: 10px;
+}
+
+.begin {
+    /* background: #6cd0ff;
+    background: #fff; */
+    /* padding: 3px; */
+}
+
+.logo {
+    height: 53rpx;
+    width: 53rpx;
+    float: left;
+    /* margin: 0 6rpx 0 0; */
+    border-radius: 50%;
+    display: block;
+    /* box-sizing: border-box; */
+    /* border: 3px solid #fff; */
+    color: #000;
+}
+
+.arrow {
+    height: 0;
+    width: 0;
+    border-width: 14px 18px;
+    border-style: solid;
+    border-color: #f11919 #fff #f11919 #f11919;
+    display: inline-block;
+    border-width: 15.5px 18px;
+}
+
+.separate {
+    width: 18rpx;
+    /* background: #fff; */
+}
+
+.team {
+    clear: both;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 32rpx;
+    flex-wrap: wrap;
+    padding-bottom: 15rpx;
+    padding-left: 29rpx;
+    padding-left: 26rpx;
+}
+
+.runner {
+    height: 65rpx;
+    width: 65rpx;
+    margin-right: 16rpx;
+    border-radius: 7px;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 16rpx;
+}
+
+.runner2 {
+    height: 65rpx;
+    width: 65rpx;
+    border-radius: 7px;
+}
+
+.blank {
+    height: 65rpx;
+    width: 85rpx;
+    margin-right: 28rpx;
+    margin-right: 24rpx;
+    margin-bottom: 32rpx;
+    margin-left: 0;
+    background: #FFEB3B;
+    background: #e8e8e8;
+    text-align: center;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.footprint {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+button {
+    border-radius: 0;
+    border: none;
+}
+
+button::after {
+    border-radius: 0;
+    border: none;
+}
+
+.join {
+    float: right;
+}
+
+.racetrack {
+    float: left;
+    margin: 30rpx 0 0;
+    width: 100%;
+    /* background: #fd843c; */
+}
+
+/* 列表按比例拼接成100% */
+
+
+.info {
+    /* border-bottom: 1px solid rgb(233, 47, 149); */
+    height: 500rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    padding-top: 0;
+    box-sizing: content-box;
+    /* background: rgb(255, 90, 90); */
+}
+
+.ibox {
+    background: #fff;
+    height: 100%;
+}
+
+.message {
+    box-sizing: border-box;
+    height: 50%;
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.message:nth-child(2n) {
+    border-left: 1px solid #888;
+}
+
+.message:nth-child(n+3) {
+    border-top: 1px solid #888;
+}
+
+.message:nth-child(4) {
+    position: relative;
+    width: 354rpx;
+}
+
+/* bottom */
+.tech {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10rpx;
+}
+
+.canvas-contain {
+    width: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    bottom: 200rpx;
+    height: 73rpx;
+}
+
+.headbtn {}
+
+.circle-box {
+    text-align: center;
+}
+
+.contact {
+    width: 167rpx;
+    height: 68rpx;
+    background: #6cd0ff;
+    color: #fff;
+    font-size: 14px;
+    line-height: 68rpx;
+    /* margin-bottom: 16rpx; */
+    /* margin-left: 24rpx; */
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* z-index: 55; */
+}
+
+.draw_btn {
+    width: 28vw;
+    position: absolute;
+    top: 31vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 1px #0D0D0D solid;
+    background-color: #BFEFFF;
+    border-radius: 5vw;
+    text-align: center;
+}
+
+#map4select {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover-image_confirm {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 收藏标记 */
+.opbtn {
+    text-align: center;
+    margin: 25rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.mark {
+    font-size: 14px;
+    background: #2196F3;
+    display: inline-block;
+}
+
+.headbtn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24rpx;
+    box-sizing: content-box;
+}
+
+.create {
+    width: 167rpx;
+    height: 68rpx;
+    background: #6cd0ff;
+    color: #fff;
+    font-size: 14px;
+    line-height: 68rpx;
+    margin-bottom: 16rpx;
+    margin-left: 24rpx;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.favico {
+    width: 67rpx;
+    height: 67rpx;
+}
+
+.switch-item {
+    /* border-radius: 50% 0 0 50%;
+    background-color: #ffb100; */
+}
+
+.daka {
+    background-color: #F44336;
+    color: #fff;
+    padding: 11rpx;
+    display: inline-block;
+    border-radius: 0 36rpx 36rpx 0;
+    padding-right: 24rpx;
+}

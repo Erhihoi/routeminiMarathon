@@ -1,0 +1,51 @@
+<view class="board">
+    <view class="calender cg3" hidden>
+        <view class="bei bian">
+            <block wx:for="{{area}}">
+                <view class="area" bindtap="byArea" data-set-range="{{index}}"  style="background: {{bg[index]}};">
+                    {{item}}
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="lists">
+        <view class="list" wx:for="{{runner}}" wx:if="{{index<list}}" wx:key="list">
+            <block wx:if="{{item.attend==item.all}}">
+                <view class="detailgroup" bindtap="showMap" data-set-map="{{index}}" data-set-teamid="{{item.id}}" style="border:1px solid rgb(255, 46, 46);">
+                    <view class="details">
+                        <view class="detail1">时间 19:30</view>
+                        <view class="detail2">距离 {{item.distance}}km</view>
+                        <view class="detail3">{{item.all}}人</view>
+                    </view>
+                    <view class="detail4">起点：{{item.start_line}}</view>
+                    <view style="height: 12rpx;"></view>
+                    <view class="detail5">终点：{{item.finish_line}}</view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="detailgroup" bindtap="showMap" data-set-map="{{index}}" data-set-teamid="{{item.id}}" >
+                    <view class="details">
+                        <view class="detail1">{{index}}时间 19:30</view>
+                        <view class="detail2">距离 {{item.distance}}km</view>
+                        <view class="detail3">{{item.all}}人</view>
+                    </view>
+                    <view class="detail4">起点：{{item.start_line}}</view>
+                    <view style="height: 12rpx;"></view>
+                    <view class="detail5">终点：{{item.finish_line}}</view>
+                </view>
+            </block>
+            <view class="hideblock" hidden="{{statusTag[index]}}">
+                <image class="map" src="../../../../style/images/map.png" mode="widthFix" style="width: 100%;"></image>
+                <view class="team">
+                    <block wx:for="{{join}}" wx:for-item="jo">
+                        <block wx:if="{{jo<item.all}}">
+                            <image wx:if="{{jo<item.attend}}"class="blank" src="../../../../style/images/footprint.jpg"></image>
+                            <view  class="blank" bindtap="join" wx:else ></view>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="more" bindtap="loadMore">更多</view>
+    </view>
+</view>

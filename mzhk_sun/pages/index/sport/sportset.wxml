@@ -1,0 +1,57 @@
+<!--mzhk_sun/pages/index/sport/sportset.wxml-->
+<view class="television">
+    <view class="mergeye">
+        <view class="lpart">
+            <view class="fpart">
+                <block wx:for="{{section}}">
+                    <view class="title" style="background:red;" bindtap="section" data-num='{{item}}'>{{item}}</view>
+                </block>
+            </view>        
+            <view class="spart">
+                <view class="race">
+                    <view class="race-middle">{{tips}} </view>
+                </view>
+            </view>        
+        </view>
+        <view class="rpart">
+            <view class="second-screen">
+                显示地图定位
+            </view>
+            <view class="ppart">
+                <block wx:for="{{section}}">
+                    <view class="title" style="background:red;" bindtap="section" data-num='{{item}}'>{{item}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- <view class="body-view">
+    <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+</view> -->
+<view class="detail">
+
+</view>
+<view class="detail">
+    <view class="info">
+        <view class="ibox">
+            <view class="message">{{message1}}</view>
+            <view class="message">{{message2}}
+            </view>
+            <view class="message">{{message3}}</view>
+            <view class="message">{{message4}}
+                <canvas class="circle" style="z-index:5; width:100%; height:100%;" canvas-id="canvasCircle"></canvas>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="tech"></view>
+<view class="canvas-contain">
+    技术支持-夔明信息
+</view>
+<!-- <view class="draw_btn" bindtap="drawCircle" style="z-index: 15;">点击开始</view> -->
+<!-- <view class="wrap">
+    <view class="circle-box">
+        <canvas class="circle" style="z-index:10;width:100%; height:100%;" canvas-id="canvasArcCir"></canvas>
+    </view>
+</view> -->

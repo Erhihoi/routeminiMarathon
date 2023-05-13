@@ -1,0 +1,37 @@
+<view class="centre">
+    <view class="headimg">
+        <image wx:if="{{avatar}}" src="{{avatar}}"></image>
+        <image wx:else src="../../../../style/images/runner.jpg"></image>
+    </view>
+    <view class="user">
+        <view class="user_info">
+            <view class="name">{{username}}</view>
+            <view class="level">
+                <view class="leicon">
+                    <image src="../../../../style/images/xunzhang.png"></image>
+                </view>
+                <!-- <view class="grade">5级</view> -->
+            </view>
+        </view>
+        <!-- <view class="tel">15968667245</view> -->
+    </view>
+</view>
+<view class="board">
+    <view class="lists">
+        <view class="list">
+            <navigator url="./goingon">
+                <view class="li">
+                    <image class="mark" src="../../../../style/images/runner.jpg"></image>
+                    <view class="tit">收藏</view>
+                </view>
+            </navigator>
+            <navigator url="./goingon">
+                <view class="li">
+                    <image class="mark" src="../../../../style/images/runner.jpg"></image>
+                    <view class="tit">留言</view>
+                </view>
+            </navigator>
+        </view>
+                     
+    </view>
+</view>

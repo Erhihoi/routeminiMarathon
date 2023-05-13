@@ -1,0 +1,106 @@
+<view class="container">
+  <view>
+    <view wx:if="{{banner.length>0}}">
+      <image class="banner" mode="aspectFill" src="{{url}}{{banner}}"></image>
+    </view>
+    <!--<view class="order-nav">
+      <view bindtap="navTap" class="{{curIndex===index?'on':''}}" data-index="{{index}}" wx:for="{{nav}}">
+        <text class="nav">{{item}}</text>
+      </view>
+    </view>-->
+    <view class="session" wx:if="{{curIndex==0}}">
+      <!--<view  class="list" wx:for="{{group}}">
+            <view class="left">
+              <image src="http://wx.tzcs0576.com/static/pic/yp/rlogo.jpg"></image>
+            </view>
+            <view class="rightList">
+              <view class="title">{{item.gname}}</view>
+              <view class="mintitle">
+                <text>范围:体育馆</text>
+                <text>5人组队</text>
+              </view>
+
+              <view class='member' style='top:60rpx;padding:10rpx' >
+                <view>
+                  <text class='groupn'>😄队名：--猩猩人类--</text>
+                </view>
+                <!--<view>
+                  <text class='groupn'>组队成员</text>
+                </view>
+              </view>
+              <view class='usrimg'>
+                <view class='avatar' wx:for="{{usrgroup}}">
+                  <image src="http://wx.tzcs0576.com/static/pic/yp/rlogo.jpg"></image>
+                </view>
+                <view style='clear:both'></view>              
+              </view>
+              <view class='decr'>
+                起点体育场路1号，终点体育场路1号。
+              </view>
+              <view class="lis">
+                <view class="price">
+                  <view>
+                    <text class="curPrice"></text>
+                  </view>
+                  <view class="oldPrice">
+                    <text></text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>-->
+
+      <view class="list" style='display:block'>
+        <!-- <view class='mtitle'>制作我的跑步线路</view> -->
+        <map id="map4select" scale="14" latitude='{{lat}}' longitude='{{lng}}' markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" bindtap="pointer" show-location show-compass style="width: 100%; height: 300px;">
+          <cover-image class="cover-image_confirm" bindtap="confirm_bag" src="/style/images/midline.png" />
+        </map>
+      </view>
+      <view class="list2">
+        <button bindtap='putdot' class="point">加入坐标</button>
+        <button bindtap='undo2' class="undo">撤销</button>
+        <!-- <button bindtap='mline' style='background:#78daf5;color:#fff'>连线</button> -->
+      </view>
+
+    <form class="list form" style='display:block;padding-top: 36rpx;' bindsubmit="fagp">
+        <!-- <input type='text' name="name" placeholder='输入队名...'></input> -->
+        <input type='text' name="beg" placeholder='输入起点...'  value="{{address}}"></input>
+        <input type='text' name="end" placeholder='输入终点...' value="{{finish_line}}"></input>
+        <view class="distance">距离：{{distancesum}}公里</view>
+        <view class="section">
+        <view class="section__title" style='text-align:center;'>选择人数</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{teamnum}}" name="team" style='text-align:center;'>
+            <view class="picker">
+            当前选择：{{teamnum[index]}}人
+            </view>
+        </picker>
+        </view>
+
+        <view class="section">
+        <view class="section__title" style='text-align:center;'>开始时间</view>
+        <view class="section__title" style='text-align:center;background:#fff;color:#555'>(18:00~21:30)</view>
+        <picker mode="time" value="{{time}}" start="18:00" end="21:30" bindchange="bindTimeChange" style='text-align:center;'>
+            <view class="picker">
+            当前选择：{{time}}
+            </view>
+        </picker>
+        </view>
+
+        <button class='nowgroup' form-type='submit'>创建</button>
+    </form>
+
+      <!--<view  class="list" style='display:block;text-align:center;line-height:35rpx'>
+            <view class='mtitle'><view>活动开始时间19:30</view>是否到点了提醒：</view>
+            <switch></switch>
+          </view>-->
+
+    </view>
+
+    <!--<view bindtap="toIndex" class="index" >
+      <view>
+        <image class="indexHome" src="/style/images/tab3.png"></image>
+      </view>
+    </view>-->
+
+  </view>
+</view>

@@ -1,0 +1,94 @@
+{
+    "setting": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "详情页",
+                    "pathName": "mzhk_sun/pages/index/package/package",
+                    "query": "id=160&uid=19",
+                    "scene": null
+                },
+                {
+                    "name": "春节红包",
+                    "pathName": "mzhk_sun/pages/user/springredbag/springredbag",
+                    "query": ""
+                },
+                {
+                    "name": "test",
+                    "pathName": "mzhk_sun/pages/user/test/test",
+                    "query": "vid=2",
+                    "scene": null
+                },
+                {
+                    "name": "welfare",
+                    "pathName": "mzhk_sun/pages/index/welfare/welfare",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "早期的组队模式",
+                    "pathName": "mzhk_sun/pages/index/sport/sport",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "mysport",
+                    "pathName": "mzhk_sun/pages/index/sport/mysport",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "deploy",
+                    "pathName": "mzhk_sun/pages/user/deploy/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "sportindex",
+                    "pathName": "mzhk_sun/pages/index/sport/sportset",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "mzhk_sun/pages/index/sport/fasport",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "mzhk_sun/pages/index/sport/my",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "mzhk_sun/pages/index/sport/nearby",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "mzhk_sun/pages/index/sport/random",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "mzhk_sun/pages/index/sport/goingon",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "libVersion": "2.25.4"
+}

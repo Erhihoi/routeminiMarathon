@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "mzhk_sun/pages/index/sport/fasport",
+    "mzhk_sun/pages/index/sport/sportindex",
+    "mzhk_sun/pages/index/sport/sport",
+    "mzhk_sun/pages/index/sport/mysport",
+    "mzhk_sun/pages/index/sport/sportset",
+    "mzhk_sun/pages/index/sport/my",
+    "mzhk_sun/pages/index/sport/nearby",
+    "mzhk_sun/pages/index/sport/random",
+    "mzhk_sun/pages/index/sport/goingon",
+    "mzhk_sun/pages/index/sport/record"
+  ],
+"permission": {
+  "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+  }
+},
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

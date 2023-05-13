@@ -1,0 +1,153 @@
+<view class="container">
+  <view>
+    <view wx:if="{{banner.length>0}}">
+      <image class="banner" mode="aspectFill" src="{{url}}{{banner}}"></image>
+    </view>
+    <view class='runbar'>
+      <!--<view bindtap="toIndex" class="rindex">
+        <image class="rindexHome" src="/style/images/tab3.png"></image>
+        <text>返回</text>
+      </view>-->
+      <view>
+        <navigator url='../sport/fasport'>
+          <image class="rindexHome" src="/style/images/redq.png"></image>
+          <text>创建组队</text>
+        </navigator>
+      </view>
+      <view>
+        <navigator url='../sport/mysport'>
+          <image class="rindexHome" src="/style/images/group.png"></image>
+          <text>我的组队</text>
+        </navigator>
+      </view>
+    </view>    
+    <!-- <view class="order-nav">
+      <view bindtap="navTap" class="{{curIndex===index?'on':''}}" data-index="{{index}}" wx:for="{{nav}}">
+        <text class="nav">{{item}}</text>
+      </view>
+    </view> -->
+    <view class="session" wx:if="{{curIndex==0}}">
+        <block wx:for="{{group}}">
+        <view class="list-c">
+          <view class="list-tit">{{item.team}}人组  队，还需2人</view>
+          <view  class="list" >
+            <view class="left">
+              <image src="http://xcx.meetu.xin/Uploads/img/index_run.jpg"></image>
+            </view>
+            <view class="rightList">
+              <view class="title">{{item.gname}}</view>
+              <view class="mintitle">
+                <text>范围:{{item.fanw}}</text>
+                <text>{{item.team}}人组队</text>
+              </view>
+              <view style='top:60rpx;padding:10rpx'>
+                <view>
+                  <text class='groupn'>队长：{{item.name}}</text>
+                </view>
+                <!-- <view class='counts'>
+                  <text >距结束还有5小时30分钟</text>
+                </view> -->
+              </view>
+              <!-- 参与按钮 -->
+              <view class="lis">
+                <view class="price">
+                  <view>
+                    <text class="curPrice"></text>
+                  </view>
+                  <view class="oldPrice">
+                    <text></text>
+                  </view>
+                </view>
+                <view class="join" bindtap='showjoin'>
+                  我要参与
+                </view>
+              </view>
+            </view>
+          </view>        
+        </view>
+          
+          <!-- <view class='menberbd'>
+            <view class='usrimg' >
+              <view class='avatar' wx:for="{{usrgroup}}">
+                <image src="http://xcx.meetu.xin/Uploads/img/index_run.jpg"></image>
+              </view>
+              <view style='float:right;color:orange;padding:12rpx;'>请加入我们!!</view>
+              <view style='clear:both'></view>
+            </view>
+          </view> -->
+          </block>
+          <!-- 通过滚动到底部加入内容curList -->
+          <view bindtap="toGroup" class="list" data-id="{{item.gid}}" wx:if="{{curList}}" wx:for="{{curList}}" wx:key="to">
+            <view class="left">
+              <image src="{{url}}{{item.pic}}"></image>
+              <text>{{item.ptnum}}1人团</text>
+            </view>
+            <view class="rightList">
+              <view class="title">{{item.gname}}</view>
+              <view class="mintitle">
+                <text>已团{{item.buynum}}件</text>
+              </view>
+              <view class="lis">
+                <view class="price">
+                  <view>
+                    <text class="curPrice">￥{{item.ptprice}}</text>
+                  </view>
+                  <view class="oldPrice">
+                    <text>{{item.shopprice}}</text>
+                  </view>
+                </view>
+                <view class="join">
+                  我要参与
+                </view>
+              </view>
+            </view>
+          </view>          
+    </view>
+    <view class="session" wx:if="{{curIndex==1}}">
+          <view  class="list hsgp" wx:for="{{groupf}}">
+            <view class="left">
+              <image src="http://wx.tzcs0576.com/static/pic/yp/rlogo.jpg"></image>
+              <text>已组队</text>
+            </view>
+            <view class="rightList">
+              <view class="title">{{item.gname}}</view>
+              <view class="mintitle">
+                <text>范围:{{item.fanw}}</text>
+                <text>{{item.team}}人组队</text>
+              </view>
+              <view style='top:60rpx;padding:10rpx'>
+                <view>
+                  <text class='groupn'>队长：{{item.name}}</text>
+                </view>
+                <view class='counts hscounts'>
+                  <text style='color:#f45b57'>已组队</text>
+                </view>
+              </view>
+              <view class="lis">
+                <view class="price">
+                  <view>
+                    <text class="curPrice"></text>
+                  </view>
+                  <view class="oldPrice">
+                    <text></text>
+                  </view>
+                </view>
+                <!--<view class="join" bindtap='showjoin'>
+                  我要参与
+                </view>-->
+              </view>
+            </view>
+            <view class='mask'></view>
+            <image class='finish' src='/style/images/dui.png'></image>
+
+          </view>    
+
+    </view>
+    <!--<view bindtap="toIndex" class="index" >
+      <view>
+        <image class="indexHome" src="/style/images/tab3.png"></image>
+      </view>
+    </view>-->
+
+  </view>
+</view>

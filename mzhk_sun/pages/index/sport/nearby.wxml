@@ -1,0 +1,61 @@
+<view class="board">
+    <view class="calender cg3">
+        <view class="bei">
+            <block wx:for="{{area}}">
+                <view class="area" bindtap="byArea" data-set-range="{{index}}"  style="background: {{bg[index]}};">
+                    {{item}}
+                </view>
+            </block>
+            <view style="float: none;clear: both;"></view>
+
+        </view>
+    </view>
+    <view class="container">
+        <view class="box">
+            <!-- <view class="title">为您找到3组跑步队伍</view>
+            <view class="randbtn">
+                <view class="confirm">换一换</view>
+            </view> -->
+            <view class="session" wx:for="{{runner}}" wx:if="{{index<list}}" wx:key="list">
+                <view class="list">
+                    <view class="menu">
+                        <view class="left">
+                            <view class="title" style="display:none">{{item.gname}}大家一起套毛线</view>
+                            <view class='usrimg'>
+                                <view class='avatar' wx:for="{{usrgroup}}">
+                                    <image src="../../../../style/images/hklogo.png"></image>
+                                </view>
+                                <view style='clear:both'></view>
+                            </view>
+                            <view class="mintitle">
+                                <!-- <text>范围:体育馆</text> -->
+                                <!-- <text>参与:5人</text> -->
+                                <text>时间{{item.start_time}}</text>
+                                <text>距离{{item.distance}}km</text>
+                            </view>
+                            <view class='decr'>起点:{{item.start_line}} , 终点:{{item.finish_line}}</view>
+                        </view>
+                        <view class="right">
+                            <button class="take" size="mini" wx:if="{{seek[item.id]}}" style="background: rgb(241, 65, 65);" bindtap="seek" data-teamid="{{item.id}}" data-seeked="{{seek[item.id]}}">已收藏</button>
+                            <button class="take" size="mini" wx:else bindtap="seek" data-teamid="{{item.id}}" data-seeked="{{seek[item.id]}}">收藏</button>
+                        </view>
+                    </view>
+                    <view class="line"></view>
+                    <view class="show" bindtap="showMap"  data-set-map="{{index}}" data-set-teamid="{{item.id}}">
+                        <button class="showay">查看线路</button>
+                    </view>
+                    <image class="map"  hidden="{{statusTag[index]}}" src="../../../../style/images/map.png" mode="widthFix" style="width: 100%;"></image>
+                </view>
+                <view class="listother" style='display:none'>
+                    <view class='mtitle'>线路</view>
+                    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;">
+                    </map>
+                </view>
+                <view  class="list" style='display:none'>
+                    <view class='mtitle'>是否到点了提醒：</view>
+                </view>
+            </view>
+            <view class="more"  bindtap="loadMore">更多</view>
+        </view>
+    </view>
+</view>

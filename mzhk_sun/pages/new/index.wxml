@@ -1,0 +1,92 @@
+<view class="gallery">
+    <view class="feng">
+        <map id="map4select" scale="13" latitude='{{lat}}' longitude='{{lng}}' markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" bindtap="pointer" show-location show-compass style="width: 100%; ">
+        </map>
+        <view class="detail">
+            <view class="titrow">
+                <!-- <view class="begin">
+                        <image class="logo" src="../../../style/images/runner.jpg"></image>
+                    </view> -->
+                <!-- <view class="one">开始 {{start_time}}</view> -->
+                <view class="two">距离：{{distance}}公里</view>
+                <view class="infoo">起点：{{start_line}}</view>
+                <view class="infoo">终点：{{finish_line}}</view>
+            </view>
+            <view class="opbtn">
+                <image src="../../../style/images/xingxing_1.png" class="favico" wx:if="{{seek[teamid]}}" bindtap="fav"></image>
+                <image src="../../../style/images/xingxing.png" class="favico" wx:else bindtap="fav"></image>
+            </view>
+        </view>
+        <view class="tips">点击下方菜单选择跑步线路</view>
+        <view class="list" >
+            <view class="item" wx:for="{{runner}}">
+                <!-- <view class="infoo">时间{{item.start_time}}</view> -->
+                <view class="infoo">距离{{item.distance}}km</view>
+                <!-- <image class="route" mode="widthFix" src="../../../style/images/route.jpg"></image> -->
+            </view>
+        </view>
+    </view>
+    <view class="bei">
+        <block wx:for="{{runner}}" wx:key="to">
+            <view class="dot" bindtap="toScreen" data-set-range="{{index}}" style="background: {{bg[index]}};">
+                <view class="prog">
+                    <image class="check" src="../../../style/images/process1.png" style="display: {{check[index]}};"></image>
+                </view>
+                <view class="distance" style="width: {{item.distance/10*80}}rpx;"></view>
+            </view>
+        </block>
+    </view>
+    <view hidden>
+        <view class="opbtn">
+            <switch class="switch-item" checked="{{today}}" bindchange="daka" color="#ffb100" />
+            <view class="daka">今日打卡</view>
+        </view>
+        <view class="plantit" style="text-align: center;">
+            跑步打卡
+        </view>
+        <view class="calender" style="clear: both;">
+            <block wx:for="{{section}}" wx:key="candle">
+                <block wx:if="{{daka[item]}}">
+                    <view class="title" bindtap="section" data-num='{{item}}' style="background: #e4793c;">{{item}}</view>
+                </block>
+                <block wx:else>
+                    <view class="title" bindtap="section" data-num='{{item}}'>{{item}}</view>
+                </block>
+            </block>
+            <view style="clear: both;"></view>
+        </view>
+    </view>
+</view>
+<!-- <view style="clear: both;" hidden>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+        <swiper-item>
+            <view class="daliy">跑步能提高身体免疫力</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="daliy">和同伴一起跑步能控制运动的节奏和运动量</view>
+        </swiper-item>
+        <swiper-item>
+            <view class="daliy">跑步提高肺活量</view>
+        </swiper-item>
+    </swiper>
+</view> -->
+<!-- <navigator url="../index/sport/record">
+    <view class="pno2">
+        查看
+    </view>
+</navigator>
+<navigator url="../index/sport/nearby">
+    <view class="pno2">
+        附近
+    </view>
+</navigator>
+<navigator url="../index/sport/record">
+    <view class="pno2">
+        跑步日志
+    </view>
+</navigator>
+<navigator url="../index/sport/my">
+    <view class="pno2">
+        个人中心
+    </view>
+</navigator> -->

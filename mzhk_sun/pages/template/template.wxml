@@ -1,0 +1,15 @@
+<template name="technical">
+    <view class="technical" wx:if="{{is_show_tech==1}}">
+        <view>
+            <image class="supportIcon" src="{{tech_img}}"></image>
+        </view>
+        <view class="tecSup">
+            <view>{{tech_title}}</view>
+            <view>合作电话：{{tech_phone}}</view>
+        </view>
+        <view bindtap="callphone" class="dialogPhone" data-phone="{{tech_phone}}">
+            <image class="supportPhone" src="../../../style/images/support2.png"></image>
+            <text>拨打</text>
+        </view>
+    </view>
+</template>

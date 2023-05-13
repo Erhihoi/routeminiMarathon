@@ -1,0 +1,179 @@
+<view class="gallery">
+    <view class="headbtn">
+        <navigator url="./fasport">
+            <button class="create">创建</button>
+        </navigator>
+        <!-- <button class="contact" bindtap="call">联系我</button> -->
+    </view>
+    <view style="margin-left: 24rpx;margin-bottom: 36rpx;">创建你的跑步线路</view>
+    <view class="board">
+        <!-- <scroll-view class="scroll-h" scroll-y='true'>
+            <view class="daliy">每天运动一小时，健康幸福一辈子。</view>
+            <view class="daliy">放下电子设备，一起出门呼吸新鲜空气</view>
+            <view class="daliy">早餐起来拥抱太阳，一天都是满满的正能量</view>
+        </scroll-view> -->
+        <view class="menu2">
+            <view class="sp1">
+                <view class="pno2">
+                    首页
+                </view>
+            </view>
+            <view class="sp2">
+                <navigator url="./nearby">
+                    <view class="pno2">
+                        附近
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view class="menu" hidden>
+            <view class="p1">
+                <navigator url="./fasport">
+                    <view class="pno">
+                        创建
+                    </view>
+                </navigator>
+            </view>
+            <view class="p2">
+                <navigator url="./nearby">
+                    <view class="pno">
+                        附近跑步
+                    </view>
+                </navigator>
+            </view>
+            <view class="p3">
+                <navigator url="./random">
+                    <view class="pno">
+                        随机组队
+                    </view>
+                </navigator>
+            </view>
+            <view class="p4">
+                <navigator url="./my">
+                    <view class="pno">
+                        个人中心
+                    </view>
+                </navigator>
+            </view>
+        </view>
+
+        <view class="feng">
+            <view style="margin-top: -28rpx;">
+                <view class="titrow">
+                    <view class="begin">
+                        <image class="logo" src="../../../../style/images/runner.jpg"></image>
+                    </view>
+                    <!-- <view class="one">开始 {{start_time}}</view> -->
+                    <view class="two">距离 {{distance}}公里</view>
+                    <!-- <view class="arrow" hidden></view>
+                    <view class="separate"></view> -->
+                    <!-- <block wx:if="{{!hasUserInfo}}">
+                        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+                        <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+                    </block> -->
+                    <!-- <view class="three">参与人数 5人</view> -->
+                </view>
+            </view>
+
+            <map id="map4select" scale="13" latitude='{{lat}}' longitude='{{lng}}' markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" bindtap="pointer" show-location show-compass style="width: 100%; ">
+            </map>
+            <!-- <view class="team">
+                <block wx:for="{{join}}" wx:key="to">
+                    <view class="blank" style="background: #98e7ff;"  wx:if="{{item==1}}">
+                        <image class="footprint" src="../../../../style/images/footprint2.png"></image>
+                    </view>
+                    <button class="blank"  bindtap="join" wx:else>
+                        <image class="runner2" src="../../../../style/images/footprint2.png" ></image>
+                    </button>
+                </block>
+            </view> -->
+        </view>
+        <view class="opbtn">
+            <image src="../../../../style/images/xingxing_1.png" class="favico" wx:if="{{seek[teamid]}}" bindtap="fav"></image>
+            <image src="../../../../style/images/xingxing.png" class="favico" wx:else bindtap="fav"></image>
+        </view>
+        <view class="cg3">
+            <view style="margin: 0 auto;padding-left:29rpx;width: 98%;box-sizing: border-box;">点击下方图标查看跑步线路</view>
+            <view class="bei">
+                <block wx:for="{{runner}}" wx:key="to">
+                    <view class="dot" bindtap="toScreen" data-set-range="{{index}}" style="background: {{bg[index]}};">
+                        <view class="prog">
+                            <image class="check" src="../../../../style/images/process1.png" style="display: {{check[index]}};"></image>
+                        </view>
+                        <view class="distance" style="width: {{item.distance/10*80}}rpx;"></view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view>打卡留下跑步记录</view>
+        <view class="plantit" style="text-align: center;">
+            12月
+        </view>
+        <view class="calender cg1" style="clear: both;display: block;">
+            <block wx:for="{{section}}" wx:key="candle">
+                <block wx:if="{{daka[item]}}">
+                    <view class="title" bindtap="section" data-num='{{item}}' style="background: #F44336;color:#fff">{{item}}</view>
+                </block>
+                <block wx:else>
+                    <view class="title" bindtap="section" data-num='{{item}}'>{{item}}</view>
+                </block>
+            </block>
+            <view style="clear: both;"></view>
+        </view>
+        <view class="opbtn">
+            <switch class="switch-item" checked="{{today}}" bindchange="daka" color="#F44336" />
+            <!-- <view class="daka">今日打卡</view> -->
+
+            <!-- <button class="mark" type="primary" style="background: #2196F3;">喜欢</button> -->
+            <!-- <button class="mark" type="primary" style="background: #afafaf;">记录</button> -->
+        </view>
+        <view class="mergeye" style="margin-top: 30rpx;clear: both;width: 100%;display: none;">
+            <view class="lpart">
+                <view class="fpart" style="background: #ffffff;height: 60rpx;line-height: 60rpx;color: #555;">
+                    创建
+                </view>
+            </view>
+            <view class="rpart">
+                <view class="second-screen" style="background: #ff2c2c;height: 60rpx;line-height: 60rpx;">
+                    附近跑步
+                </view>
+            </view>
+            <view class="lpart">
+                <view class="fpart" style="background: #ffffff;height: 60rpx;line-height: 60rpx;color: #555;">
+                    随机组队
+                </view>
+            </view>
+            <view class="lpart">
+                <view class="fpart" style="background: #ffffff;height: 60rpx;line-height: 60rpx;color: #555;">
+                    个人中心
+                </view>
+            </view>
+        </view>
+        <view class="menu2">
+            <view class="sp3">
+                <navigator url="./record">
+                    <view class="pno2">
+                        收藏夹
+                    </view>
+                </navigator>
+            </view>
+
+            <view class="sp4">
+                <navigator url="./my">
+                    <view class="pno2">
+                        个人中心
+                    </view>
+                </navigator>
+            </view>
+        </view>
+
+
+    </view>
+</view>
+<button class="contact canvas-contain" bindtap="call">联系我</button>
+<!-- <view class="draw_btn" bindtap="drawCircle" style="z-index: 15;">点击开始</view>
+<view class="wrap">
+    <view class="circle-box">
+        <canvas class="circle" style="z-index:10;width:100%; height:100%;" canvas-id="canvasArcCir"></canvas>
+    </view>
+</view> -->

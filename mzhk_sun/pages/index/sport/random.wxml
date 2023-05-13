@@ -1,0 +1,50 @@
+
+<view class="container">
+    <view class="box">
+        <!-- <view class="title">为您找到3组跑步队伍</view>
+        <view class="randbtn">
+            <view class="confirm">换一换</view>
+        </view> -->
+        <view class="session" wx:for="{{random}}">
+            <view class="list" wx:for="{{group}}">
+                <view class="menu">
+                    <view class="left">
+                        <view class="title" style="display:none">{{item.gname}}大家一起套毛线</view>
+                        <view class='usrimg'>
+                            <view class='avatar' wx:for="{{usrgroup}}">
+                                <image src="http://xcx.meetu.xin/Uploads/img/index_run.jpg"></image>
+                            </view>
+                            <view style='clear:both'></view>
+                        </view>
+                        <view class="mintitle">
+                            <text>范围:体育馆</text>
+                            <text>参与:5人</text>
+                            <text>距离5km</text>
+                        </view>
+                        <view class='decr'>起点:体育场路1号 , 终点:体育场路1号</view>
+                    </view>
+                    <view class="right">
+                        <button class="take" size="mini" >加入</button>
+                    </view>                
+                </view>
+
+            </view>
+            <view class="randbtn">
+                <!-- <view class="confirm2">换一换</view> -->
+                <!-- <view class="confirm">确定</view> -->
+            </view>
+            <!-- <view>
+                <button >查看线路</button>
+            </view> -->
+            <view class="listother" style='display:none'>
+                <view class='mtitle'>线路</view>
+                <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;">
+                </map>
+            </view>
+
+            <view  class="list" style='display:none'>
+                <view class='mtitle'>是否到点了提醒：</view>
+            </view>
+        </view>
+    </view>
+</view>
